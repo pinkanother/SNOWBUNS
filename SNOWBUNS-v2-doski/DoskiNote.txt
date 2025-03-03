@@ -1,0 +1,3 @@
+EXTRAS:
+- I ADDED JWT middleware functionality
+- I IMPRPOVED LOGIN CODE

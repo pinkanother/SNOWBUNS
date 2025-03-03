@@ -1,0 +1,187 @@
+.purchase-wrapper {
+  min-height: calc(100vh - 167px);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+
+  .purchase-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(25, 25, 25, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+
+    .purchase-title {
+      color: #ffffff;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .payment-buttons {
+      display: grid;
+      gap: 1rem;
+      padding: 1rem;
+
+      .purchase-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1.2rem;
+        background: linear-gradient(145deg, #2a2a2a, #333333);
+        border: none;
+        border-radius: 10px;
+        color: #ffffff;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #343434;
+
+        &:hover {
+          transform: translateY(-2px);
+          background: linear-gradient(145deg, #333333, #2a2a2a);
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        svg {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 90px;
+  right: 0;
+  bottom: 77px;
+  // background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  &.small {
+    left: 75px;
+  }
+  &.long {
+    left: 200px;
+  }
+  .modal {
+    background: linear-gradient(145deg, #2a2a2a, #333333);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    color: #ffffff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+
+    .modal-content {
+      display: flex;
+      flex-direction: column;
+      .modal-content-item {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+
+    .wallet-info {
+      display: flex;
+      justify-content: space-between;
+      margin: 1.5rem 0;
+      font-size: 1.2rem;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .credit-card-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      input {
+        padding: 1rem;
+        border-radius: 8px;
+        border: 2px solid #444;
+        background: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        font-size: 1rem;
+
+        &::placeholder {
+          color: #888;
+        }
+
+        &:focus {
+          outline: none;
+          border-color: #666;
+          background: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+
+    .pay-button {
+      background: linear-gradient(90deg, #00ff40, #00ffff);
+      color: #000000;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 255, 128, 0.3);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    position: fixed;
+    top: 90px;
+    left: 75px;
+    right: 0;
+    bottom: 77px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+}

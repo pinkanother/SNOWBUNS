@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Dragon+Slayer&display=swap");
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .login-box {
+    padding-top: 20px;
+    position: relative;
+    width: 400px;
+    height: 470px;
+    background-color: #1a1a1a;
+    // border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    padding-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    .login-button {
+      // width: 130px;
+      width: 100%;
+      height: 50px;
+      border: 2px solid white;
+      outline: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: white;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.1em;
+      font-weight: 500;
+      transition: 0.5s;
+    }
+    .login-button:hover {
+      background-image: linear-gradient(
+        to right,
+        rgb(0, 255, 64),
+        rgb(0, 255, 255)
+      );
+      -webkit-background-clip: border-box;
+      -webkit-border-box-fill-color: transparent;
+      -webkit-text-fill-color: black;
+    }
+    .login-input-box {
+      position: relative;
+      width: 310px;
+      margin: 30px 0;
+      border-bottom: 2px solid white;
+    }
+
+    .login-input-box label {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      font-size: 1em;
+      color: white;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+
+    .login-input-box input {
+      width: 100%;
+      height: 50px;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 1em;
+      color: white;
+      padding: 0 35px 0 5px;
+    }
+
+    .login-input-box input:focus ~ label,
+    .login-input-box label.float {
+      top: -5px;
+    }
+    .login-input-box input:-webkit-autofill {
+      -webkit-text-fill-color: #fff !important; /* Keep text white */
+      transition: background-color 5000s ease-in-out 0s,
+        color 5000s ease-in-out 0s; /* Prevent flashing */
+      font-family: inherit; /* Ensure font consistency */
+    }
+
+    .login-input-box input:-webkit-autofill,
+    .login-input-box input:-webkit-autofill:focus {
+      -webkit-text-fill-color: #fff !important; /* Ensure text color remains white on focus */
+      background-color: transparent !important; /* Or set to desired background color */
+    }
+
+    .login-input-box .icon {
+      position: absolute;
+      right: 8px;
+      color: white;
+      font-size: 1.2em;
+      line-height: 57px;
+    }
+    h2 {
+      font-size: 2em;
+      background: linear-gradient(
+        to right,
+        rgb(0, 255, 64),
+        rgb(0, 255, 255)
+      ); /* Define your gradient colors */
+      -webkit-background-clip: text; /* Clip the background to the text */
+      -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+      text-align: center;
+    }
+
+    .remember-forget {
+      margin: -15px 0 15px;
+      font-size: 0.9em;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .remember-forget label input {
+      margin: right 3px;
+    }
+
+    .remember-forget a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .remember-forget a:hover {
+      text-decoration: underline;
+    }
+
+    .login-link {
+      font-size: 0.9em;
+      color: white;
+      text-align: center;
+      margin: 15px 0 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .login-link a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+    .login-ds-divider {
+      justify-content: center;
+      align-items: center;
+      margin: 8px 0;
+      display: flex;
+
+      .login-ds-divider__left {
+        background-color: white;
+        flex-grow: 1;
+        height: 1px;
+      }
+      .login-ds-divider__content {
+        font-size: var(--ds-font-size-s);
+        line-height: var(--ds-line-height-s);
+        color: gray;
+        flex-shrink: 0;
+        margin: 0 10px;
+      }
+      .login-ds-divider__right {
+        background-color: white;
+        flex-grow: 1;
+        height: 1px;
+      }
+    }
+    .login-ds-button {
+      display: flex;
+      justify-content: center;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: 7px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba($color: #373737, $alpha: 1);
+      }
+      .login-ds-button__icon {
+        padding-top: 3px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    .login-box {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      border-radius: 0;
+    }
+    .input-box {
+      width: 290px;
+    }
+  }
+}

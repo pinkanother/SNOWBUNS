@@ -1,0 +1,124 @@
+.settings-page {
+  min-height: calc(100vh - 167px);
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  .settings-container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .settings-title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .settings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .setting-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .setting-label {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .label-icon {
+      font-size: 1.25rem;
+    }
+  }
+
+  .setting-input,
+  .setting-select {
+    padding: 1rem;
+    background-color: #2d2d2d;
+    border: 2px solid #3d3d3d;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+
+    &::placeholder {
+      color: #808080;
+    }
+
+    &:focus {
+      border-color: #6200ea;
+      box-shadow: 0 0 0 2px rgba(98, 0, 234, 0.2);
+      outline: none;
+    }
+  }
+
+  .setting-select {
+    cursor: pointer;
+
+    option {
+      background-color: #2d2d2d;
+      color: #ffffff;
+      padding: 0.5rem;
+    }
+  }
+
+  .save-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    // background: linear-gradient(135deg, #6200ea, #7c4dff);
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 255, 64),
+      rgb(0, 255, 255)
+    );
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      color: black;
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 800px) {
+    padding: 1rem;
+
+    .settings-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .settings-container {
+      padding: 1.5rem;
+      // width: fit-content;
+    }
+
+    .settings-title {
+      font-size: 2rem;
+    }
+  }
+}
